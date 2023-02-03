@@ -1,4 +1,4 @@
-public class PacMan{
+public class PacMan implements GameConsole{
     public void up() {
         System.out.println("up");
     }

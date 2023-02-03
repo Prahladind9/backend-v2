@@ -1,7 +1,6 @@
 public class GameRunner {
-//    private PacMan game;
-    private Mario game;
-    public GameRunner(Mario game) {
+    private GameConsole game;
+    public GameRunner(GameConsole game) {
         this.game = game;
     }
 
