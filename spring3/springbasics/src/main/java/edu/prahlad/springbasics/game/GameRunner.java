@@ -1,3 +1,5 @@
+package edu.prahlad.springbasics.game;
+
 public class GameRunner {
     private GameConsole game;
     public GameRunner(GameConsole game) {

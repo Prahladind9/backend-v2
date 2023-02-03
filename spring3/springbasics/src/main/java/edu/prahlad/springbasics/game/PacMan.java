@@ -1,4 +1,6 @@
-public class Mario implements GameConsole{
+package edu.prahlad.springbasics.game;
+
+public class PacMan implements GameConsole{
     public void up() {
         System.out.println("up");
     }
