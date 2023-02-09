@@ -12,6 +12,9 @@ public class App02HelloWorldSpring {
         System.out.println(context.getBean("name"));
         System.out.println(context.getBean("AgeOf"));
         System.out.println(context.getBean("person"));
+        System.out.println(context.getBean("PersonInMethodCall"));//case sensitive
+        System.out.println(context.getBean("personParameters"));//case sensitive
         System.out.println(context.getBean("address"));
+        System.out.println(context.getBean(Address.class));
     }
 }
