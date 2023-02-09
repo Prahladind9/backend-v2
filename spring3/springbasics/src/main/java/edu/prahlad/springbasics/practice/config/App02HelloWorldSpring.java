@@ -1,7 +1,6 @@
-package edu.prahlad.springbasics;
+package edu.prahlad.springbasics.practice.config;
 
-import edu.prahlad.springbasics.game.GameRunner;
-import edu.prahlad.springbasics.game.Mario;
+import edu.prahlad.springbasics.practice.config.HelloWorldConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class App02HelloWorldSpring {

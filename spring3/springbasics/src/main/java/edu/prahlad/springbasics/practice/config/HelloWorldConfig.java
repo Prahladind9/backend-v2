@@ -1,4 +1,4 @@
-package edu.prahlad.springbasics;
+package edu.prahlad.springbasics.practice.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -26,7 +26,7 @@ public class HelloWorldConfig {
 
     @Bean
     public Address address(){
-        var address = new Address("pankow", "berlin");
+        var address = new Address("Baker Street", "London");
         return address;
     }
 }

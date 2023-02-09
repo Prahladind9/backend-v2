@@ -1,4 +1,4 @@
-package edu.prahlad.springbasics;
+package edu.prahlad.springbasics.game;
 
 import edu.prahlad.springbasics.game.GameRunner;
 import edu.prahlad.springbasics.game.Mario;
