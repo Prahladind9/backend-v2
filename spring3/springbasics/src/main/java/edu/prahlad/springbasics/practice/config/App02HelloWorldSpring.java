@@ -1,6 +1,5 @@
 package edu.prahlad.springbasics.practice.config;
 
-import edu.prahlad.springbasics.practice.config.HelloWorldConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class App02HelloWorldSpring {
@@ -9,6 +8,8 @@ public class App02HelloWorldSpring {
         var context = new AnnotationConfigApplicationContext(HelloWorldConfig.class);
         //2: Configure the things that we want Spring to manage
         //   - @Configuration Class
+
+        //3: Retrieve beans managed by Spring
         System.out.println(context.getBean("name"));
         System.out.println(context.getBean("AgeOf"));
         System.out.println(context.getBean("person"));
