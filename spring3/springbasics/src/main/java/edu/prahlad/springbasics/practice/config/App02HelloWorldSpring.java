@@ -2,6 +2,8 @@ package edu.prahlad.springbasics.practice.config;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import java.util.Arrays;
+
 public class App02HelloWorldSpring {
     public static void main(String[] args) {
         //1: Launch a Spring Context
@@ -16,6 +18,15 @@ public class App02HelloWorldSpring {
         System.out.println(context.getBean("PersonInMethodCall"));//case sensitive
         System.out.println(context.getBean("personParameters"));//case sensitive
         System.out.println(context.getBean("address"));
+
+        //in case multiple bean match primary or specified qualifier
+        //primary
         System.out.println(context.getBean(Address.class));
+        //qualifier
+        System.out.println(context.getBean("personParametersQualifier"));
+
+        //list of all beans managed by spring
+        Arrays.stream(context.getBeanDefinitionNames())
+                .forEach(System.out::println);
     }
 }

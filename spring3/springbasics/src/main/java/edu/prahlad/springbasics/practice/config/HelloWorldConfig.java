@@ -1,5 +1,6 @@
 package edu.prahlad.springbasics.practice.config;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -37,6 +38,13 @@ public class HelloWorldConfig {
         return person;
     }
 
+    @Bean//auto wiring is the magic - also the dependent beans are passed via priority: primary > beanName
+    public Person personParametersQualifier(String name, int age,
+                                            @Qualifier("address4Qualifier") Address address3){
+        var person = new Person(name, age, address3);
+        return person;
+    }
+
     @Bean
     public Address address(){
         var address = new Address("Baker Street", "London");
@@ -53,6 +61,13 @@ public class HelloWorldConfig {
     @Primary
     public Address address3(){
         var address = new Address("MG Road", "Banglore");
+        return address;
+    }
+
+    @Bean
+    @Qualifier("address4Qualifier")
+    public Address address4(){
+        var address = new Address("qualifier", "Berlin");
         return address;
     }
 }
