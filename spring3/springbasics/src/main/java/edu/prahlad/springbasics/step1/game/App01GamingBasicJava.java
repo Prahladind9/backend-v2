@@ -1,7 +1,4 @@
-package edu.prahlad.springbasics.game;
-
-import edu.prahlad.springbasics.game.GameRunner;
-import edu.prahlad.springbasics.game.Mario;
+package edu.prahlad.springbasics.step1.game;
 
 public class App01GamingBasicJava {
     public static void main(String[] args) {

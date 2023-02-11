@@ -1,4 +1,4 @@
-package edu.prahlad.springbasics.practice.config;
+package edu.prahlad.springbasics.step1.config;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;

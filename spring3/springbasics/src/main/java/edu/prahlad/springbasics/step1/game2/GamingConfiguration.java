@@ -1,4 +1,4 @@
-package edu.prahlad.springbasics.game2;
+package edu.prahlad.springbasics.step1.game2;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
@@ -31,7 +31,6 @@ public class GamingConfiguration {
 
     @Bean
     public GameRunner gameRunner2(@Qualifier("PacMan") GameConsole game){
-        System.out.println(game);
         return new GameRunner(game);
     }
 

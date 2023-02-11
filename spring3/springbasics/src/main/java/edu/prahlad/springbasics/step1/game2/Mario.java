@@ -1,6 +1,6 @@
-package edu.prahlad.springbasics.game2;
+package edu.prahlad.springbasics.step1.game2;
 
-public class PacMan implements GameConsole {
+public class Mario implements GameConsole {
     public void up() {
         System.out.println("up");
     }

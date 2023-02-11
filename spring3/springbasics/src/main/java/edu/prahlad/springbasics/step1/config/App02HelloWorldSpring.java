@@ -1,4 +1,4 @@
-package edu.prahlad.springbasics.practice.config;
+package edu.prahlad.springbasics.step1.config;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

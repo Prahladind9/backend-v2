@@ -1,4 +1,4 @@
-package edu.prahlad.springbasics.game;
+package edu.prahlad.springbasics.step1.game;
 
 public class PacMan implements GameConsole{
     public void up() {

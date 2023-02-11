@@ -1,4 +1,4 @@
-package edu.prahlad.springbasics.game2;
+package edu.prahlad.springbasics.step1.game2;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
