@@ -4,11 +4,10 @@ import edu.prahlad.java.concepts.CollectionConcept.Product;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
+import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @Slf4j
 public class CollectionConceptTest {
@@ -76,5 +75,28 @@ public class CollectionConceptTest {
         assertEquals(idToProduct.get(5), pool);
 
         idToProduct.forEach((id, product) -> log.trace(product.name() + " has an weight of lb:{}", product.weight()));
+    }
+
+    @Test
+    void given_immutableCollectionMap_then_CannotModifyMap(){
+        List<String> countries = List.of("USA", "UK");
+        assertThrows(UnsupportedOperationException.class, () -> countries.add("SG"));
+
+        Collection<String> desserts = new ArrayList<>();
+        desserts.add("waffels"); desserts.add("cake");
+
+        List<String> immutableDesserts = List.copyOf(desserts);
+        assertThrows(UnsupportedOperationException.class, () -> immutableDesserts.remove("cake"));
+
+        List<String> carBrands = new ArrayList<>();
+        carBrands.add("BENZ"); carBrands.add("AUDI");
+
+        //Unmodifiable views
+        List<String> carBrandsView = Collections.unmodifiableList(carBrands);
+        assertThrows(UnsupportedOperationException.class, () -> immutableDesserts.remove("BENZ"));
+        assertEquals(2, carBrandsView.size());
+
+        carBrands.remove("BENZ");
+        assertEquals(1, carBrandsView.size());
     }
 }
